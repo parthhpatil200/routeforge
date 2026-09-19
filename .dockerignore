@@ -1,0 +1,5 @@
+build/
+build-gcc16/
+*.o
+.git/
+.vs/
