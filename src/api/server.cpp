@@ -101,7 +101,9 @@ void Server::setup_routes() {
 
 void Server::start(int port) {
     std::cout << "Starting server on port " << port << std::endl;
-    server_.listen("0.0.0.0", port);
+    if (!server_.listen("0.0.0.0", port)) {
+        std::cerr << "Failed to start server on port " << port << std::endl;
+    }
 }
 
 void Server::stop() {

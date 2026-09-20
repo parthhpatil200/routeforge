@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 project(routeforge VERSION 1.0.0 LANGUAGES CXX)
+set(CMAKE_EXE_LINKER_FLAGS "-static")
 
 # Allows current CMake releases to configure third-party projects that still
 # declare compatibility with versions older than CMake 3.5.
